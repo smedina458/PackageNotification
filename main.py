@@ -37,7 +37,7 @@ refreshrate = 2
 
 driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
 driver.implicitly_wait(0.5)
-driver.get('https://www.ups.com/track?loc=en_US&tracknum=1ZE10Y190415481592&requester=SBCH&returnto=upsmychoice%3Floc%3Den_US%26tracknum%3D1ZE10Y190415481592/trackdetails')
+driver.get('https://www.ups.com/track?loc=en_US&requester=ST/')
 
 while True:
     try:
@@ -58,7 +58,7 @@ message = client.messages \
                  )
 
 print(message.sid)
-print("Text would have sent")
+print("Text sent")
 
 driver.quit()
 
