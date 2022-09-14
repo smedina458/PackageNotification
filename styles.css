@@ -1,0 +1,14 @@
+body {
+    background-color: #fff;
+    margin: 0;
+    background: grey;
+    text-align: center;
+    }
+    
+    .header, .footer {
+    width: 100%;
+    }
+    
+    .sidebar {
+    display: none;
+    }
