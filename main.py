@@ -16,6 +16,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException 
 from webdriver_manager.firefox import GeckoDriverManager
+from os import environ
 import time
 import urllib
 from urllib.request import urlopen
@@ -28,9 +29,8 @@ import ssl
 import urllib3
 
 
-
-account_sid = 'AC2ba2ab9fad54e9b0fda2975e2a1f9d1e' 
-auth_token = 'ce9439873393b07b37544e54abf93bde' 
+account_sid = environ.get('TWILIO_ACCOUNT_SID')
+auth_token = environ.get('TWILIO_AUTH_TOKEN')
 client = Client(account_sid, auth_token)
 
 refreshrate = 2
@@ -47,7 +47,6 @@ while True:
 
     except NoSuchElementException:
         False
-        #time.sleep(refreshrate)
         driver.refresh()
         driver.implicitly_wait(0.5)
 
@@ -65,5 +64,6 @@ driver.quit()
 
 
 
-#Hannahs package
+
+#Another test package
 # https://tools.usps.com/go/TrackConfirmAction?qtc_tLabels1=9400109206094540159923
