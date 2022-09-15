@@ -11,6 +11,7 @@
 # py -m pip install -U selenium
 # py -m pip install BeautifulSoup4
 # py -m pip install twilio
+# pip3 install flask flask-sqlalchemy
 import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
