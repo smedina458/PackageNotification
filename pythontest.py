@@ -26,12 +26,12 @@ form = cgi.FieldStorage
 
 app = Flask(__name__)
 
-@app.route('/index.html', methods=['GET','POST'])
+@app.route('/index', methods=['GET','POST'])
 def my_form_post():
     trackingnumber = request.form['trackingnumber']
     phonenumber = request.form['phonenumber']
     carrier = request.form['carrier']
-    return trackingnumber, phonenumber, carrier
+    return trackingnumber, phonenumber, carrier, render_template("index.html")
 
 
 driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
