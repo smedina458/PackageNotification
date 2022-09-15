@@ -9,6 +9,8 @@
         <form action="pythontest.py" method="post">
             <label for="trackingnumber">Input Tracking Number:</label>
             <input type ="text" name="trackingnumber">
+            <label for="phonenumber">Input Phone Number:</label>
+            <input type ="tel" name="phonenumber" placeholder="1234567890" pattern="[0-9]{10}" required>
             <label for="carrier">Choose a carrier:</label>
             <select name="carrier" id="carrier">
                 <option value="Amazon">Amazon</option>

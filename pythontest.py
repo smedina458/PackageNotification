@@ -18,9 +18,20 @@ from urllib.request import urlopen
 import json
 import ssl
 import urllib3
+from flask import Flask, request, render_template
+
 
 form = cgi.FieldStorage
 
+
+app = Flask(__name__)
+
+@app.route('/', methods=['POST'])
+def my_form_post():
+    trackingnumber = request.form['trackingnumber']
+    phonenumber = request.form['phonenumber']
+    carrier = request.form['carrier']
+    return trackingnumber, phonenumber, carrier
 
 
 driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
