@@ -26,7 +26,7 @@ form = cgi.FieldStorage
 
 app = Flask(__name__)
 
-@app.route('/', methods=['POST'])
+@app.route('/index.html', methods=['GET','POST'])
 def my_form_post():
     trackingnumber = request.form['trackingnumber']
     phonenumber = request.form['phonenumber']
